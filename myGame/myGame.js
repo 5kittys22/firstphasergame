@@ -49,7 +49,7 @@ game_state.main.prototype = {
 		this.stars.enableBody = true;
 		this.player.scale.setTo(0.3,0.3)
 		
-		for (var i = 0; i < 60; i++) {
+		for (var i = 0; i < 10; i++) {
 			var star = this.stars.create(i * 80, 0, 'star');
 			star.body.gravity.y = 300;
 			star.body.bounce.y = 0.50 + Math.random() * 0.2;
@@ -91,7 +91,7 @@ game_state.main.prototype = {
 		}
 
 		game.physics.arcade.overlap(this.player, this.stars, this.collectStar, null, this);
-		if (this.score === 10){
+		if (this.score === 100){
 			game.state.start('end');
 		}
 		
@@ -101,6 +101,15 @@ game_state.main.prototype = {
 		star.kill();
 		this.score++
 		this.scoreText.text = this.score
+		
+		
+			var star = this.stars.create(Math.random() * 800, 0, 'star');
+			star.body.gravity.y = 300;
+			star.body.bounce.y = 0.50 + Math.random() * 0.2;
+			star.body.setSize(15, 15, 20, 20);
+			
+		
+		
 	}
 }
 game.state.add('main', game_state.main);
