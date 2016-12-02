@@ -27,9 +27,9 @@ game_state.main.prototype = {
 		ground.body.immovable = true;
 		var ledge = this.platforms.create(50, 465, 'ground');
 		ledge.body.immovable = true;
-		var ledge = this.platforms.create(350, 350, 'ground');
+		var ledge = this.platforms.create(300, 350, 'ground');
 		ledge.body.immovable = true;
-		var ledge = this.platforms.create(60, 235, 'ground');
+		var ledge = this.platforms.create(59, 235, 'ground');
 		ledge.body.immovable = true;
 		var ledge = this.platforms.create(500, 100, 'ground');
 		ledge.body.immovable = true;
@@ -53,6 +53,7 @@ game_state.main.prototype = {
 			var star = this.stars.create(i * 80, 0, 'star');
 			star.body.gravity.y = 300;
 			star.body.bounce.y = 0.50 + Math.random() * 0.2;
+			star.body.setSize(15, 15, 20, 20);
 			
 		}
 
