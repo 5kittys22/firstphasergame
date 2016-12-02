@@ -90,6 +90,11 @@ game_state.main.prototype = {
 		}
 
 		game.physics.arcade.overlap(this.player, this.stars, this.collectStar, null, this);
+		if (this.score === 10){
+			game.state.start('end');
+		}
+		
+		
 	},
 	collectStar: function(player, star) {
 		star.kill();
