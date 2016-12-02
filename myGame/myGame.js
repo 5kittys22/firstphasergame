@@ -10,7 +10,7 @@ game_state.main.prototype = {
 	preload: function() {
 		game.load.image('sky', 'assets/sky.png');
 		game.load.image('ground', 'assets/platform.png');
-		game.load.image('star', 'assets/star.png');
+		game.load.image('star', 'assets/c.png');
 		game.load.spritesheet('dude', 'assets/bluebunny.png', 130, 130);
 
 	},
@@ -59,7 +59,7 @@ game_state.main.prototype = {
 		this.score = 0;
 		this.scoreText = game.add.text(16, 16, 'score: 0', {
 			fontSize: '32px',
-			fill: '#000'
+			fill: '#015'
 		});
 	},
 	
