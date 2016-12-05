@@ -49,7 +49,7 @@ game_state.main.prototype = {
 		this.stars.enableBody = true;
 		this.player.scale.setTo(0.3,0.3)
 		
-		for (var i = 0; i < 60; i++) {
+		for (var i = 0; i < 200; i++) {
 			var star = this.stars.create(i * 80, 0, 'star');
 			star.body.gravity.y = 300;
 			star.body.bounce.y = 0.50 + Math.random() * 0.2;
